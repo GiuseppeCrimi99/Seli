@@ -1,0 +1,49 @@
+.container-card {
+    width: 65%;
+    margin: 0 auto; /* Centra il container orizzontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuisce lo spazio tra le card */
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.card {
+    width:30%;
+    min-width: 350px;
+    height: 350px;
+    margin-bottom: 2rem;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.651);
+}
+@media (max-width: 1045px) {
+    .container-card{
+        justify-content: center;
+    }
+    .card {
+        width: calc(50% - 1rem); 
+        min-width: unset; 
+    }
+}
+@media (max-width: 768px) {
+    .container-card {
+        justify-content: center; 
+    }
+
+    .card {
+        width: calc(50% - 1rem); 
+        min-width: unset; 
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+      width: 100%; 
+      
+    }
+}

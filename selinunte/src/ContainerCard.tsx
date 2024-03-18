@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from "./Card";
-import "./ContainerCard.css";
-
+import Card from "./Card"
+import "./ContainerCard.css"
 const ContainerCard: React.FC =() => {
   return (
     <div>

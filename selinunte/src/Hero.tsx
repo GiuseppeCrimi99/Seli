@@ -18,17 +18,20 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const backgroundImageStyle = {
+    backgroundImage: `url(${images[currentImageIndex]})`,
+  };
+
   return (
-    <div className="hero-container">
+    <div className="hero-container" style={backgroundImageStyle}>
       <div className="hero-content">
-        <div className="h1-cont">
-          <h1 className='benvenuto'>BENVENUTO A SELINUNTE!</h1>
-        </div>
-        <p className='benvenuto'>Esplora l'antica bellezza della magnifica città di Selinunte, dove ogni pietra racconta una storia millenaria. Scopri le rovine imponenti che testimoniano la grandezza della Magna Grecia e immergiti nell'atmosfera unica di questo sito archeologico straordinario.</p>
-        <button className="hero-button"><span>Inizia la tua avventura</span></button>
-      </div>
-      <div className="hero-image-container">
-        <img className="hero-image" src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+        <div className='containerPar'>
+          <div className="h1-cont">
+            <h1 className='benvenuto'>BENVENUTO A SELINUNTE!</h1>
+          </div>
+          <p className='benvenuto'>Esplora l'antica bellezza della magnifica città di Selinunte, dove ogni pietra racconta una storia millenaria. Scopri le rovine imponenti che testimoniano la grandezza della Magna Grecia e immergiti nell'atmosfera unica di questo sito archeologico straordinario.</p>
+          <button className="hero-button"><span>Inizia la tua avventura</span></button>
+        </div> 
       </div>
     </div>
   );
