@@ -1,0 +1,75 @@
+.card1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1px;
+  }
+  
+  .card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.281)); /* Gradient di sfondo */
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-variant: small-caps;
+    opacity: 0; /* Inizialmente invisibile */
+    transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out; /* Aggiungi transizione per il bordo */
+    border: 2px solid transparent; /* Imposta il bordo trasparente */
+  }
+  
+  .card1:hover .card-overlay,
+  .card1.hover .card-overlay { /* Attiva quando hover è true */
+    opacity: 1;
+  }
+  .card-overlay button {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: 100px;
+    border: 1px solid white;
+    color: rgba(255, 255, 255, 0.637);
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; 
+  }
+  .card-overlay button:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+  
+  .card-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 1;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    text-align: center; 
+    text-transform: uppercase;
+    padding: 10px; 
+    border-left: 2px solid #ccc; 
+  }
